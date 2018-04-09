@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <%= form_with( model: contact, local: true,  :class =>"form-group", :id => "contact") do |form| %>
+
+    <div class="field form-group row">
+      <%= form.label :Name, :class => "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.text_field :Name, id: :slug_Name, :class => " form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Email, :class => "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.text_field :Email, id: :slug_Email, :class => " form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Comments, :class => "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.text_area :Comments, id: :slug_Comments, :class => " form-control form-control-sm" %>
+    </div>
+
+    <div class="form-actions form-group">
+  	  <button class="btn btn-outline-warning"><% form.submit %>Send</button>    
+    </div>
+  <% end %>
+
+</div>

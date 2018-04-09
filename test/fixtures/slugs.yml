@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Company: MyString
+  Logo: MyString
+  Duration: MyString
+  Category: MyString
+  Image: MyString
+  Title: MyString
+  Details: MyText
+  Starts: 2018-03-26 14:28:33
+  Expires: 2018-03-26 14:28:33
+  Website: MyString
+  Views: 1
+  Rating: 1
+
+two:
+  Company: MyString
+  Logo: MyString
+  Duration: MyString
+  Category: MyString
+  Image: MyString
+  Title: MyString
+  Details: MyText
+  Starts: 2018-03-26 14:28:33
+  Expires: 2018-03-26 14:28:33
+  Website: MyString
+  Views: 1
+  Rating: 1

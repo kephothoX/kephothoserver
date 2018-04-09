@@ -1,0 +1,155 @@
+@import "bootstrap.css";
+@import "bootstrap-grid.css";
+@import "bootstrap-reboot.css";
+
+ header{
+    position:relative;
+    color:#ffd800;
+    width:100%;    
+    font-size:auto;
+    background-color:clear;    
+  }
+  
+  section{
+    position:relative;
+    width:100%;
+    font-size:auto;
+    padding:5px;
+    margin:5px;
+    text-align:center;
+  }
+  
+  footer{
+    color:#ffd800;
+    position:relative;
+    background-color:#000;
+    text-align:center;
+    margin-bottom:0px;
+    font-size:auto;
+    
+  }
+  
+
+    nav a:link{
+     color:#0000ff;
+  }
+    nav a:visited{
+      color:#ffd800;
+  }
+    nav a:hover{
+      color:6090f0;
+  }
+  
+  .navigation{
+    display:flex;
+    flex-direction: rows;
+  }
+  
+  .navigation li{
+    list-style-type: none;
+    padding: 3px;
+  }
+  
+  .pull-right{
+    text-align:right;
+    
+    
+  }
+  .pull-left{
+    text-align:left;
+    
+  }
+  
+ .hpage{
+    background-image: url(<%= asset_path 'img0.jpg' %>);
+
+  }
+  
+  .inline{
+    display:flex;
+    flex-direction:row;
+    flex: 1;
+  }
+  
+  .banner-content {
+    width:100%;
+  }
+  
+  .banner{
+    width:100%;
+  }
+  
+  a:link{
+    padding:5px;
+    margin:5px;
+  }
+  .imgd{
+    background-image: images/ban.jpg;
+  }
+  
+strong{
+  color:red;
+}
+
+
+.parent{
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+
+.child{
+  position:absolute;
+  bottom:-20px;
+  left:50px;
+  z-index:2;
+}
+
+@media (min-width: 300px){
+
+    .parent{
+      position:relative;
+      z-index:1;
+    }
+
+    .child{
+      position:absolute;
+      top:100px;
+      left:50px;
+      z-index:2;
+    }    
+}
+
+.parent > img{
+  width:100%;
+}
+
+.top{
+  padding-bottom:70px;
+}
+
+@media (max-width:650px){
+
+    .top{
+      padding-bottom:170px;
+    }
+
+ }
+
+.child > img{
+  width:50%;
+}
+.card{
+  border:0px;
+}
+
+.holder{
+  display:inline-flex;
+  flex-direction:col;
+  flex: 1;
+    
+}
+
+h2{
+  color:#ffd800;
+}
