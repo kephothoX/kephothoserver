@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="card-header">
+    <h2>CLOTHING</h2>
+  </div>
+  <hr/>
+
+  <div class="row">
+
+    <% @slug.each do |entry| %>
+      <div class="card col-sm-4">
+        <div class="card-body">
+          <div class="parent">
+             <%= image_tag entry.Image.url class: "img-fluid " if entry.Image? %>
+          </div>
+            <br/><br/>
+            <h5 class="card-title"><%= entry.Company %></h5>
+            <br/>
+            <p class="card-text"><%= entry.Title %></p>
+        </div>
+        <div class="card-footer">
+          <strong><%= entry.Views %></strong>views
+          <%=link_to 'Website', entry.Website %>
+          <button class="btn btn-outline-warning"><%= link_to 'Read More', entry  %></button>
+
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+
+
+</div>

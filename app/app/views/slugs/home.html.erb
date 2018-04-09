@@ -1,0 +1,98 @@
+<div class= "container-fluid">
+
+	<div id="oslide" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#oslide" data-slide-to="0" class="active"></li>
+        <li data-target="#oslide" data-slide-to="1"></li>
+        <li data-target="#oslide" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+       <div class="carousel-item active ">
+       	  <%= image_tag 'ban.jpg',  :class => 'banner' %>
+        </div>
+        <div class="carousel-item">
+        	<%= image_tag  'ban1.jpg', :class => 'banner' %>
+        </div>
+        <div class="carousel-item">
+        	<%= image_tag  'ban2.jpg',  :class => 'banner' %>
+        </div>
+        <div class="carousel-item">
+        	<%= image_tag  'ban3.jpg', :class => 'banner' %>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#oslide" role="button" data-slide="prev">
+       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#oslide" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+  </div>
+
+  <br/>
+<div class="card-header">
+  <h2>TOP OFFERS</h2>
+</div>
+<hr/>
+  <div class=" row">
+    <% @slug.each do |slug|  %>
+      <div class="card col-6 col-md-2">
+        <div class="card-body">
+          <%= link_to slug do %>
+          <div class="parent">
+            <%= image_tag slug.Image.url :class => "img-thumbnail " if slug.Image? %>
+          </div>
+          <% end %>
+            <br/>
+            <p class="card-text"><%= slug.Title %></p>
+          </div>
+          <div class="card-footer">
+            <strong><%= slug.Views %></strong>views
+          </div>
+        </div>
+    <% end %>
+  </div>
+
+  <hr/>
+
+  <div class="row">
+    <div class="card col-6 col-md-2">
+      <%= link_to image_tag('restaurant.png', :class => "img-thumbnail rounded"), slugs_restaurant_path %>
+    </div>
+    <div class="card col-6 col-md-2">
+      <%=link_to  image_tag('accomodation.png', :class => "img-thumbnail rounded"), slugs_accomodation_path %>
+    </div>
+    <div class="card col-6 col-md-2">
+      <%=link_to  image_tag('clothing.png', :class => "img-thumbnail rounded"), slugs_clothing_path %>
+    </div>
+    <div class="card col-6 col-md-2">
+      <%=link_to image_tag('travel.png', :class => "img-thumbnail rounded"), slugs_travel_path %>
+    </div>
+
+
+    <div class="card col-6 col-md-2">
+      <%= link_to image_tag('beauty.png', :class => "img-thumbnail rounded"), slugs_beauty_path %>
+    </div>
+    <div class="card col-6 col-md-2">
+      <%=link_to  image_tag('electronics.png', :class => "img-thumbnail rounded"), slugs_electronics_path %>
+    </div>
+    <div class="card col-6 col-md-2">
+      <%=link_to  image_tag('hardware.png', :class => "img-thumbnail rounded"), slugs_hardware_path %>
+    </div>
+    <div class="card col-6 col-md-2">
+      <%=link_to image_tag('entertainment.png', :class => "img-thumbnail rounded"), slugs_entertainment_path %>
+    </div>
+  </div>
+
+	<div class="card text-center">
+		<div class="card-header">
+			<h2>ABOUT US</h2>
+		</div>
+		<div class="card-body">
+			<p class="card-text">A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. If you’re familiar with Bootstrap 3, cards replace our old panels, wells, and thumbnails. Similar functionality to those components is available as modifier classes for cards.</p>
+			<a href="#" class="btn btn-primary">Read More</a>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <%= form_with(model: slug, local: true, multipart: true, class: "form-group") do |form| %>
+    <% if slug.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(slug.errors.count, "error") %> prohibited this slug from being saved:</h2>
+
+        <ul>
+          <% slug.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field form-group row">
+      <%= form.label :Company,  class: "col-sm-2 col-form-label col-form-label-sm"%>
+      <%= form.text_field :Company, id: :slug_Company, class: " form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Logo, class: "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.file_field :Logo, id: :slug_Logo, class: " form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Duration, class: "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.select :Duration,
+        [
+            ['Daily', 'daily'],
+            ['Weekly', 'weekly'],
+            ['Monthly', 'monthly'],
+            ['Quartely', 'quartely']
+          ], :class => " form-control form-control-sm"
+      %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Category, :class => "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.select :Category,
+        [
+              ['Restaurant', 'restaurant'],
+              ['Travel', 'travel'],
+              ['Clothing', 'clothing'],
+              ['Entertaimnet', 'entertainment'],
+              ['Hardware', 'hardware'],
+              ['Accomodation', 'accomodation'],
+              ['Beauty', 'beauty'],
+           ], :class => " form-control form-control-sm"
+      %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Image, :class => "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.file_field :Image, id: :slug_Image, :class => " form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Title, :class => "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.text_field :Title, id: :slug_Title, :class => " form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Details, :class => "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.text_area :Details, id: :slug_Details, class: " form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Starts, class: "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.datetime_select :Starts, id: :slug_Starts, class: " form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Expires, class: "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.datetime_select :Expires, id: :slug_Expires, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Website, class: "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.url_field :Website, id: :slug_Website, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Views, class: "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.number_field :Views, id: :slug_Views, class: " form-control form-control-sm" %>
+    </div>
+
+    <div class="field form-group row">
+      <%= form.label :Rating, class: "col-sm-2 col-form-label col-form-label-sm" %>
+      <%= form.number_field :Rating, id: :slug_Rating, class: "form-control form-control-sm" %>
+    </div>
+
+    <div class="actions form-group row">
+      <%= form.submit "POST OFFER",  class: "btn btn-primary "%>
+    </div>
+  <% end %>
+
+</div>
