@@ -60,10 +60,6 @@
     
   }
   
- .hpage{
-    background-image: url(<%= asset_path 'img0.jpg' %>);
-
-  }
   
   .inline{
     display:flex;
@@ -82,9 +78,6 @@
   a:link{
     padding:5px;
     margin:5px;
-  }
-  .imgd{
-    background-image: images/ban.jpg;
   }
   
 strong{
