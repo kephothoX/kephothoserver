@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 #
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
 gem 'bootstrap', '~> 4.0.0'
 
 gem 'bootstrap-sass', '~> 3.2.0 '
@@ -42,6 +43,10 @@ gem 'bootstrap-sass', '~> 3.2.0 '
 gem 'autoprefixer-rails'
 
 gem 'jquery-rails'
+
+gem 'jquery-turbolinks'
+
+gem 'sprockets'
 
 gem 'carrierwave', '~> 1.0'
 
@@ -64,6 +69,10 @@ gem 'kaminari'
 gem 'mail_form'
 
 gem 'slim-rails'
+
+ruby '2.3.3'
+
+gem 'webpacker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
